@@ -14,6 +14,6 @@ int main()
     a=a^b;
     b=a^b;
     a=a^b;
-    printf("\nUsing a third variable after swaping a = %d and b = %d",a,b);
+    printf("\nUsing bitwise operators after swaping a = %d and b = %d",a,b);
     return 0;
 }
