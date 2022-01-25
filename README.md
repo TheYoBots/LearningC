@@ -12,4 +12,5 @@ All the programs are run by the method given below unless mentioned otherwise th
 4. Start Turbo C++ and copy the program and paste it there.
 5. Save the program as a `.c` file.
 6. Compile the program to check if there are any errors.
-7. Run the program to get the desirable output.
+7. Run the program to get the desirable output. <br/>
+**Do note that for certain files you might have to click `alt`+`f5` to get the output displayed.**
