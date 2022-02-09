@@ -18,19 +18,15 @@ Output Format : The output is Sum, Avg, Minimum and Maximum element of array pri
 
 int main()
 {
-    int i,a[100],size,sum=0;
+    int a[100],i,n,sum=0;
     float avg;
-    scanf("%d",&size);
-    for(i=0; i<size; i++)
+    scanf("%d",&n);
+    for(i=0; i<n; i++)
     {
         scanf("%d",&a[i]);
-    }
-    for(i=0; i<=size; i++)
-    {
         sum=sum+a[i];
+        avg=(float)(sum)/n;
     }
-    printf("Sum = %d",sum);
-    avg=(float)(sum)/size;
-    printf("\nAvg = %f \nMin element is %d found at a[0] \nMax element is %d found at a[3]",avg,a[0],a[3]);
+    printf("\nSum = %d \nAvg = %f \nMin element is %d found at a[0] \nMax element is %d found at a[3]",sum,avg,a[0],a[3]);
     return 0;
 }

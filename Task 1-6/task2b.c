@@ -21,16 +21,10 @@ int main()
 {
     int a,b,i;
     scanf("%d %d",&a,&b);
-    if(b>=0)
-        for(i=1; i<=b; i++)
-        {
-            a++;
-        }
-    else
-        for(i=0; i>b; i--)
-        {
-            a--;
-        }
+    while(b--)
+    {
+        a++;
+    }
     printf("%d",a);
     return 0;
 }
