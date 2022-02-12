@@ -19,23 +19,25 @@ Output Format : The output is search successful element found at particular posi
 // Start Writing your program from here..!!*/
 
 #include<stdio.h>
+#include<stdlib.h>
 
 int main()
 {
-    int a[100],search,i,n;
+    int a[100],i,n,x;
     scanf("%d",&n);
-    for(i=0; i<n; i++)
+    for(i=0;i<n;i++)
+    {
         scanf("%d",&a[i]);
-        scanf("%d",&search);
-        for(i=0; i<n; i++)
+    }
+    scanf("%d",&x);
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==x)
         {
-            if (a[i]==search)
-            {
-                printf("Search is successful element is found at position %d",++i);
-                break;
-            }
+            printf("Search is successful element is found at position %d",i+1);
+            exit(0);
         }
-    if(i==n)
-        printf("Element not found");
+    }
+    printf("Element not found");
     return 0;
 }
