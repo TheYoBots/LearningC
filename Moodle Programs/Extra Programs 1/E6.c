@@ -23,7 +23,7 @@ Output Format : display whether given input is character or not.
 int main()
 {
     char x;
-    x=getchar();
+    scanf(" %c",&x);
     if((x>='A'&&x<='Z') || (x>='a'&&x<='z'))
     {
         printf("%c is a character",x);
