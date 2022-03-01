@@ -23,18 +23,20 @@ Note - %s is a Palindrome.
 int main()
 {
     char str[20];
-    int i,j,l;
+    int i,j,l,flag=0;
     scanf("%s",str);
     for(l=0; str[l]!='\0'; l++);
     for(i=0,j=l-1; i<=j; i++,j--)
     {
         if(str[i]!=str[j])
         {
-            printf("%s is not a Palindrome.",str);
+            flag=1;
             break;
         }
     }
-    if(i>j)
+    if(flag==0)
         printf("%s is a Palindrome.",str);
+    else
+        printf("%s is not a Palindrome.",str);
     return 0;
 }
