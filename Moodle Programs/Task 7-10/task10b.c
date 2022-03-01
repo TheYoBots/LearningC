@@ -15,40 +15,44 @@ Output Format :Display the GCD of two numbers separated by a new line as per the
 
 #include<stdio.h>
 
-int recgcd(int x, int y);
-int gcd(int x, int y);
+int RecGcd(int n1, int n2);
+int Gcd(int n1, int n2);
 
 int main()
 {
     int n1,n2,res1,res2;
     scanf("%d %d",&n1,&n2);
-    res1=recgcd(n1,n2);
+    res1=RecGcd(n1,n2);
     printf("GCD of %d and %d Using Recursive Function is:%d",n1,n2,res1);
-    res2=gcd(n1,n2);
+    res2=Gcd(n1,n2);
     printf("\nGCD of %d and %d Using Non-Recursive Function is:%d",n1,n2,res2);
     return 0;
 }
 
-int recgcd(int x, int y)
+int RecGcd(int n1, int n2)
 {
-    if(y == 0)
+    if(n2>n1)
     {
-       return(x);
+       return(RecGcd(n2,n1));
+    }
+    else if(n2==0)
+    {
+        return(n1);
     }
     else
     {
-        return(recgcd(y, x%y));
+        return(RecGcd(n2,n1%n2));
     }
 }
 
-int gcd(int x, int y)
+int Gcd(int n1, int n2)
 {
-    int z;
-    while(x%y!=0)
+    int temp;
+    while(n2!=0)
     {
-        z=x%y;
-        x=y;
-        y=z;
+        temp=n1%n2;
+        n1=n2;
+        n2=temp;
     }
-    return(y);
+    return(n1);
 }
