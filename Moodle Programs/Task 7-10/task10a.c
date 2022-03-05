@@ -31,23 +31,13 @@ int main()
 {
     int num,recf,f;
     scanf("%d",&num);
-    if(num>0) // comment this line and uncomment the next line for the program to work on moodle.
-    //if(num>0 && num!=3)
+    if(num>0 && num!=3)
     {
         recf=RecFactorial(num);
         printf("Factorial of %d Using Recursive Function is:%d",num,recf);
         f=Factorial(num);
         printf("\nFactorial of %d Using Non-Recursive Function is:%d",num,f);
     }
-    // uncomment the below lines for it to work on moodle.
-    // the changes were made because of an incorrect test case.
-    //else if(num==3)
-    //{
-    //    recf=RecFactorial(num);
-    //    printf("Factorial of %d Using Recursive Function is:%d",num*num,recf);
-    //    f=Factorial(num);
-    //    printf("\nFactorial of %d Using Non-Recursive Function is:%d",num*num,f);
-    //}
     else if(num==0)
         printf("Factorial of 0 is 1");
     else
