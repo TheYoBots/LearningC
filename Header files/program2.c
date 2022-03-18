@@ -1,3 +1,5 @@
+// Sum and Bigger of 2 numbers using header file.
+
 #include<stdio.h>
 #include"program2.h"
 

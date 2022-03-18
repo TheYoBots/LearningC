@@ -1,3 +1,5 @@
+// Addition and Multiplication using header file.
+
 #include <stdio.h>
 #include "program1.h"
 
